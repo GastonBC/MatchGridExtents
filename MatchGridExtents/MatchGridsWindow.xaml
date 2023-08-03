@@ -1,0 +1,70 @@
+﻿<Window x:Class="MatchGridExtents.MatchGridsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatchGridExtents"
+        mc:Ignorable="d"
+        Title="Match Grid Extents" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="1. Select the view which style is to be applied" Margin="10,0,10,0" VerticalContentAlignment="Center" Height="26" VerticalAlignment="Top"/>
+        <Label Content="2. Select the views to which apply the style" Margin="10,0,10,0" VerticalContentAlignment="Center" Grid.Column="1" Height="26" VerticalAlignment="Top"/>
+
+        <Button x:Name="Source_ClearSearch_Copy" Content="✖" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsEnabled="True" Click="Source_ClearSearch_Click" Margin="10,0,0,0" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Width="30" Grid.Row="1"/>
+
+        <TextBox x:Name="Source_Search_tb" VerticalContentAlignment="Center" TextChanged="Source_SearchTxt_Changed" Margin="50,0,5,0" Height="30" VerticalAlignment="Center" Grid.Row="1" />
+
+
+        <ListView x:Name="lv_SourceView" SelectionMode="Single" Margin="10,0,5,10" Grid.Row="2" SelectionChanged="Source_SelChanged" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Sheet" DisplayMemberBinding="{Binding Sheet.SheetNumber}" Width="100" />
+                    <GridViewColumn Header="View Name" DisplayMemberBinding="{Binding View.Name}" Width="260" />
+
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+
+
+        <Button x:Name="ClearSearch_Copy" Content="✖" Foreground="Gray" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsEnabled="True" Click="Target_ClearSearch_Click" Margin="5,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Width="30" Height="30" VerticalAlignment="Center" Grid.Row="1"/>
+
+        <TextBox x:Name="Target_tb_Search" VerticalContentAlignment="Center" TextChanged="search_txt_changed" Grid.Column="1" Margin="40,10,10,10" Grid.Row="1" />
+
+        <ListView x:Name="lv_Target" SelectionMode="Extended" Grid.Row="2" Margin="5,0,10,0" Grid.Column="1" SelectionChanged="Target_SelChanged" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="" Width="35">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Margin="3, 0" IsChecked="{Binding Path=Checked, Mode=TwoWay}" Checked="onCheckBoxCheck" Unchecked="onCheckBoxUncheck"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Sheet" DisplayMemberBinding="{Binding Sheet.SheetNumber}" Width="100" />
+                    <GridViewColumn Header="View Name" DisplayMemberBinding="{Binding View.Name}" Width="260" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="b_SelSheets" Content="Confirm" Grid.Row="3" IsEnabled="False" Click="SelSheets_Click" Margin="110,10,115,10" Grid.Column="1"/>
+        <Button x:Name="b_SelAll" Content="Select all" Grid.Row="3"  IsEnabled="False" Click="SelAll_Click" Margin="5,10,0,10" Grid.Column="1" HorizontalAlignment="Left" Width="100"/>
+        <Button x:Name="b_DeselAll" Content="Deselect all" Grid.Row="3" Margin="270,0,10,10" IsEnabled="False" Click="DeselAll_Click" Grid.Column="1" HorizontalAlignment="Right" Width="100" Height="20" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Window>
+

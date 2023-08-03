@@ -20,10 +20,13 @@ namespace MatchGridExtents
             try
             {
                 UIDocument uidoc = commandData.Application.ActiveUIDocument;
-                Document doc = uidoc.Document;
+
+                MatchGridsWindow gr = new MatchGridsWindow(uidoc);
+                gr.ShowDialog();
 
                 return Result.Succeeded;
             }
+
             catch (Exception ex)
             {
                 Utils.CatchDialog(ex);

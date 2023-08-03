@@ -35,9 +35,9 @@ namespace MatchGridExtents
                 #endregion
 
                 // Button configuration
-                string MatchGridExtentsName = "Default\nName";
+                string MatchGridExtentsName = "Match Grid\nExtents";
                 PushButtonData MatchGridExtentsData = new PushButtonData(MatchGridExtentsName, MatchGridExtentsName, exeConfigPath, "MatchGridExtents.ThisCommand");
-                MatchGridExtentsData.LargeImage = Utils.RetriveImage("MatchGridExtents.Resources.MatchGridExtents32x32.ico", Assembly.GetExecutingAssembly()); // Pushbutton image
+                MatchGridExtentsData.LargeImage = Utils.RetriveImage("MatchGridExtents.Resources.GridsIcons32x32.ico", Assembly.GetExecutingAssembly()); // Pushbutton image
                 MatchGridExtentsData.ToolTip = "";
                 DefaultPanel.AddItem(MatchGridExtentsData); // Add pushbutton
 
