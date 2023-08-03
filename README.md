@@ -1,4 +1,4 @@
-## MatchGridExtents
+## Match Grid Extents
 
 This tool lets you copy the layout of the grids in a sheet (for example the elbows, 2D extents and bubble visibility) and transfer it to another view.
 
