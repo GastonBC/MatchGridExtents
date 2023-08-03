@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Match Grid Extents</Name>
+    <Assembly>MatchGridExtents.dll</Assembly>
+    <AddInId>4524a1b8-b55a-48d8-974f-38fa3a377290</AddInId>
+    <Description>Description</Description>
+    <FullClassName>MatchGridExtents.ThisApplication</FullClassName>
+    <VendorId>Gast</VendorId>
+    <VendorDescription>gastonbalparda@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
