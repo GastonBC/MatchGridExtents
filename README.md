@@ -4,7 +4,7 @@ This tool lets you copy the layout of the grids in a sheet (for example the elbo
 
 This would normally be done with the "Propagate Extents" tool that comes with Revit, but you need to turn off scope boxes, propagate the extents, and then turn them on again. And the window to select the views is terrible to use.
 
-On top of propagating extents, this tool -will- reveal and hide grids according to the view chosen as template.
+On top of propagating extents, this tool will -in the future- reveal and hide grids according to the view chosen as template.
 
 ## Installation
 
