@@ -6,6 +6,9 @@ This would normally be done with the "Propagate Extents" tool that comes with Re
 
 On top of propagating extents, this tool will -in the future- reveal and hide grids according to the view chosen as template.
 
+![2023-08-09_15-35-52](https://github.com/GastonBC/MatchGridExtents/assets/60661612/6fb692a2-fded-4c12-85a7-832322f6948b)
+
+
 ## Installation
 
 [Refer to this page](https://github.com/GastonBC/GasTools/wiki/How-to-install-an-addin)
